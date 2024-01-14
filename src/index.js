@@ -1,13 +1,39 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import './App.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import "bootstrap/dist/css/bootstrap.css"
+import "bootstrap/dist/js/bootstrap.bundle"
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import LandingScreen from './pages/LandingScreen';
+import LoginScreen from './pages/LoginScreen';
+import SignUpScreen from './pages/SignUpScreen';
+import Profile from './pages/Profile';
 
+let router=createBrowserRouter([
+  {
+    path:'/',
+    element:<LandingScreen/>
+  },
+  {
+    path:'/loginscreen',
+    element:<LoginScreen/>
+  },
+  {
+    path:'/signup',
+    element:<SignUpScreen/>
+  },
+  {
+    path:'/profile',
+    element:<Profile/>
+  }
+])
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router}/>
   </React.StrictMode>
 );
 

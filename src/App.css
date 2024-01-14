@@ -1,38 +1,206 @@
-.App {
-  text-align: center;
+:root {
+  --primary-font: 'Rubik', sans-serif;
+  --primary-color: #6C25FF;
+  --secondary-color: #CBCBCB;
+  --text-color: #1D2226;
+  --placeholder-color: #999;
 }
 
-.App-logo {
-  height: 40vmin;
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--primary-font);
+}
+.container-fluid{
+  background-color: #fdfcfcf0;
+}
+
+.layout,
+.profileLayout {
+  width: 375px;
+  height: 100vh;
+  background: #F7F8F9;
+  padding: 31px 20px;
+}
+
+.landingContent h1,
+.loginContent h1 {
+  font-size: 28px;
+  line-height: 17px;
+  font-weight: medium;
+  color: var(--text-color);
+  margin-bottom: 14px;
+}
+.loginContent h1{
+  line-height: 36px;
+}
+.landingContent p,
+.loginContent p {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: normal;
+  color: var(--text-color);
+  opacity: 0.6;
+}
+
+.landingBtn .button,
+.loginBtn .button,
+.createBtn .button {
+  padding: 14.5px 0;
+  font-size: 16px;
+  line-height: 17px;
+  font-weight: medium;
+  color: #fff;
+}
+
+.landingBtn .button {
+  background-color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.landingBtn .button:last-child {
+  background: #6C25FF4B;
+  color: var(--text-color);
+}
+
+.loginBtn .button {
+  background: var(--secondary-color);
+  border-radius: 6px;
+}
+
+.createBtn .button {
+  background: var(--primary-color);
+  border-radius: 6px;
+}
+
+.outlined-input {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.outlined-input label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+  background: #F7F8F9;
   pointer-events: none;
+  transition: all 0.3s ease-out;
+  font-size: 13px;
+  line-height: 17px;
+  font-weight: normal;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.outlined-input input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+  outline: none;
+  background: transparent;
+  transition: border-color 0.3s ease-out;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.outlined-input input:focus {
+  border-color: var(--secondary-color);
 }
 
-.App-link {
-  color: #61dafb;
+.outlined-input input::placeholder {
+  color: transparent !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.outlined-input input:focus::placeholder {
+  color: var(--placeholder-color) !important;
+}
+
+.outlined-input input:focus+label {
+  top: 0px;
+  color: var(--primary-color);
+}
+
+.outlined-input input::placeholder {
+  color: var(--placeholder-color);
+}
+
+.layout form {
+  margin-top: 24px;
+}
+
+.outlineRadio label {
+  font-size: 13px;
+  line-height: 17px;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+.radio-buttons input {
+  width: 22px;
+  height: 22px;
+  border: 1px solid #642AF5;
+  margin-right: 12px;
+}
+
+.radio-buttons label {
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: normal;
+  margin-right: 23px;
+}
+
+.createBtn .button {
+  background: var(--primary-color);
+  border-radius: 6px;
+  padding: 11px 0;
+  font: normal normal medium 16px/17px;
+  color: #fff;
+}
+
+.button:hover {
+  background-color: #5423c959 !important;
+  color: #1D2226;
+}
+
+.accSetting {
+  background: #fff;
+  padding: 27px 0 19px 0;
+}
+
+.accSetting h2 {
+  font-size: 18px;
+  line-height: 21px;
+  color: #1D2226;
+  padding: 0 0 0 15px;
+  margin-bottom: 0;
+}
+.userName{
+  margin-left: 20px;
+}
+.userName h3 {
+  font-size: 15px;
+  line-height: 19px;
+  font-weight: medium;
+  color: #1D2226;
+  margin-bottom: 6px !important;
+}
+
+.userName h4 {
+  font-size: 14px;
+  line-height: 19px;
+  color: #1D2226;
+  margin-bottom: 0;
+}
+.userDetails{
+  margin-top: 30px;
+}
+.userDetails p{
+  font-size: 14px;
+  line-height: 22px;
+  color: #1D2226;
+
+}
+.profileLayout hr{
+  border-style: dashed;
+  border: 1px dashed #CBCBCB;
 }
