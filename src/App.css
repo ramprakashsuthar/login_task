@@ -124,6 +124,17 @@
   color: var(--placeholder-color);
 }
 
+.outlined-input input:not(:placeholder-shown) + label,
+.outlined-input input:focus + label {
+  top: 0;
+  color: var(--primary-color);
+  font-size: 12px;
+}
+
+.outlined-input input::placeholder {
+  color: transparent;
+}
+
 .layout form {
   margin-top: 24px;
 }
